@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - VoteIndia</title>
+    <meta name="description" content="View election results">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header (Same as index.html) -->
+        <header class="header">
+            <div class="container">
+                <div class="header-container">
+                    <a href="index.html" class="logo">
+                        <img src="download__3_-removebg-preview.png" alt="VoteIndia Logo" height="32" width="32">
+                        <span>VoteIndia</span>
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li>
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="candidates.html" class="nav-link">Candidates</a>
+                            </li>
+                            <li>
+                                <a href="results.html" class="nav-link active">Results</a>
+                            </li>
+                            <li class="nav-item-auth hidden">
+                                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                            </li>
+                            <li class="nav-item-voter hidden">
+                                <a href="vote.html" class="nav-link">Vote</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="nav-link">About</a>
+                            </li>
+                            <li>
+                                <a href="help.html" class="nav-link">Help</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-actions">
+                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-outline">Login</a>
+                            <a href="register.html" class="btn btn-saffron">Register</a>
+                        </div>
+
+                        <div class="user-menu hidden">
+                            <button class="btn btn-icon">
+                                <i class="fas fa-bell"></i>
+                            </button>
+                            <a href="dashboard.html" class="btn btn-icon">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <button id="logout-btn" class="btn btn-outline">Logout</button>
+                        </div>
+
+                        <button class="mobile-menu-button" aria-label="Toggle menu">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <div class="container">
+                    <ul class="mobile-nav-list">
+                        <li>
+                            <a href="index.html" class="mobile-nav-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="candidates.html" class="mobile-nav-link">Candidates</a>
+                        </li>
+                        <li>
+                            <a href="results.html" class="mobile-nav-link active">Results</a>
+                        </li>
+                        <li class="mobile-nav-item-auth hidden">
+                            <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+                        </li>
+                        <li class="mobile-nav-item-voter hidden">
+                            <a href="vote.html" class="mobile-nav-link">Vote</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="mobile-nav-link">About</a>
+                        </li>
+                        <li>
+                            <a href="help.html" class="mobile-nav-link">Help</a>
+                        </li>
+                        <li class="mobile-auth-buttons">
+                            <a href="login.html" class="btn btn-outline btn-full">Login</a>
+                        </li>
+                        <li class="mobile-auth-buttons">
+                            <a href="register.html" class="btn btn-saffron btn-full">Register</a>
+                        </li>
+                        <li class="mobile-user-menu hidden">
+                            <button id="mobile-logout-btn" class="btn btn-saffron btn-full">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Results content will be dynamically inserted by results.js -->
+            <div class="loading">Loading results...</div>
+        </main>
+
+        <!-- Footer (Same as index.html) -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <h3 class="footer-title">VoteIndia</h3>
+                        <p>
+                            Official online voting platform operated by the Election Commission of India. Secure, transparent, and
+                            accessible voting for all citizens.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="index.html" class="footer-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="candidates.html" class="footer-link">Candidates</a>
+                            </li>
+                            <li>
+                                <a href="results.html" class="footer-link">Results</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="footer-link">About</a>
+                            </li>
+                            <li>
+                                <a href="help.html" class="footer-link">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="footer-title">Contact Us</h3>
+                        <ul class="footer-links">
+                            <li class="footer-contact">
+                                <i class="fas fa-phone contact-icon"></i>
+                                <span>1800-111-950</span>
+                            </li>
+                            <li class="footer-contact">
+                                <i class="fas fa-envelope contact-icon"></i>
+                                <span>contact@eci.gov.in</span>
+                            </li>
+                            <li class="footer-contact">
+                                <i class="fas fa-map-marker-alt contact-icon"></i>
+                                <span>Nirvachan Sadan, Ashoka Road, New Delhi - 110001</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-official">
+                        <i class="fas fa-shield-alt official-icon"></i>
+                        <span>Secured and monitored by the Election Commission of India</span>
+                    </div>
+                    <p class="copyright">
+                        &copy; <span id="current-year">2024</span> VoteIndia. All rights reserved. Official government voting platform.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>
+

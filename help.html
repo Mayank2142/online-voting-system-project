@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Support - VoteIndia</title>
+  <meta name="description" content="Help and support for VoteIndia platform">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app">
+      <!-- Header (Same as index.html) -->
+      <header class="header">
+          <div class="container">
+              <div class="header-container">
+                  <a href="index.html" class="logo">
+                      <img src="download__3_-removebg-preview.png" alt="VoteIndia Logo" height="32" width="32">
+                      <span>VoteIndia</span>
+                  </a>
+
+                  <!-- Desktop Navigation -->
+                  <nav class="nav">
+                      <ul class="nav-list">
+                          <li>
+                              <a href="index.html" class="nav-link">Home</a>
+                          </li>
+                          <li>
+                              <a href="candidates.html" class="nav-link">Candidates</a>
+                          </li>
+                          <li>
+                              <a href="results.html" class="nav-link">Results</a>
+                          </li>
+                          <li class="nav-item-auth hidden">
+                              <a href="dashboard.html" class="nav-link">Dashboard</a>
+                          </li>
+                          <li class="nav-item-voter hidden">
+                              <a href="vote.html" class="nav-link">Vote</a>
+                          </li>
+                          <li>
+                              <a href="about.html" class="nav-link">About</a>
+                          </li>
+                          <li>
+                              <a href="help.html" class="nav-link active">Help</a>
+                          </li>
+                      </ul>
+                  </nav>
+
+                  <div class="header-actions">
+                      <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle dark mode">
+                          <i class="fas fa-moon"></i>
+                      </button>
+
+                      <div class="auth-buttons">
+                          <a href="login.html" class="btn btn-outline">Login</a>
+                          <a href="register.html" class="btn btn-saffron">Register</a>
+                      </div>
+
+                      <div class="user-menu hidden">
+                          <button class="btn btn-icon">
+                              <i class="fas fa-bell"></i>
+                          </button>
+                          <a href="dashboard.html" class="btn btn-icon">
+                              <i class="fas fa-user"></i>
+                          </a>
+                          <button id="logout-btn" class="btn btn-outline">Logout</button>
+                      </div>
+
+                      <button class="mobile-menu-button" aria-label="Toggle menu">
+                          <i class="fas fa-bars"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div class="mobile-menu">
+              <div class="container">
+                  <ul class="mobile-nav-list">
+                      <li>
+                          <a href="index.html" class="mobile-nav-link">Home</a>
+                      </li>
+                      <li>
+                          <a href="candidates.html" class="mobile-nav-link">Candidates</a>
+                      </li>
+                      <li>
+                          <a href="results.html" class="mobile-nav-link">Results</a>
+                      </li>
+                      <li class="mobile-nav-item-auth hidden">
+                          <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+                      </li>
+                      <li class="mobile-nav-item-voter hidden">
+                          <a href="vote.html" class="mobile-nav-link">Vote</a>
+                      </li>
+                      <li>
+                          <a href="about.html" class="mobile-nav-link">About</a>
+                      </li>
+                      <li>
+                          <a href="help.html" class="mobile-nav-link active">Help</a>
+                      </li>
+                      <li class="mobile-auth-buttons">
+                          <a href="login.html" class="btn btn-outline btn-full">Login</a>
+                      </li>
+                      <li class="mobile-auth-buttons">
+                          <a href="register.html" class="btn btn-saffron btn-full">Register</a>
+                      </li>
+                      <li class="mobile-user-menu hidden">
+                          <button id="mobile-logout-btn" class="btn btn-saffron btn-full">Logout</button>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+          <div class="container">
+              <div class="help-page">
+                  <!-- Help Hero Section -->
+                  <section class="help-hero glass-card">
+                      <div class="help-hero-content">
+                          <h1 class="help-title">Help & Support Center</h1>
+                          <p class="help-subtitle">Find answers to your questions and get assistance with the VoteIndia platform</p>
+                          
+                          <div class="help-search">
+                              <div class="search-container">
+                                  <i class="fas fa-search search-icon"></i>
+                                  <input type="text" id="help-search-input" placeholder="Search for help topics..." class="search-input">
+                                  <button class="btn btn-primary search-button">Search</button>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+
+                  <!-- Help Content Section -->
+                  <div class="help-content">
+                      <div class="help-sidebar">
+                          <div class="glass-card">
+                              <h3 class="sidebar-title">Help Topics</h3>
+                              <ul class="help-topics">
+                                  <li class="active" data-target="voter-registration">
+                                      <i class="fas fa-user-plus"></i> Voter Registration
+                                  </li>
+                                  <li data-target="voting-process">
+                                      <i class="fas fa-vote-yea"></i> Voting Process
+                                  </li>
+                                  <li data-target="candidate-info">
+                                      <i class="fas fa-user-tie"></i> Candidate Information
+                                  </li>
+                                  <li data-target="election-dates">
+                                      <i class="fas fa-calendar-alt"></i> Election Dates
+                                  </li>
+                                  <li data-target="id-documents">
+                                      <i class="fas fa-id-card"></i> ID Documents
+                                  </li>
+                                  <li data-target="technical-issues">
+                                      <i class="fas fa-wrench"></i> Technical Issues
+                                  </li>
+                                  <li data-target="contact-support">
+                                      <i class="fas fa-headset"></i> Contact Support
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+
+                      <div class="help-main">
+                          <!-- Voter Registration Section -->
+                          <section id="voter-registration" class="help-section active">
+                              <div class="glass-card">
+                                  <h2 class="section-title">Voter Registration</h2>
+                                  
+                                  <div class="faq-container">
+                                      <div class="faq-item">
+                                          <div class="faq-question">
+                                              <h3>Who is eligible to register as a voter?</h3>
+                                              <i class="fas fa-chevron-down"></i>
+                                          </div>
+                                          <div class="faq-answer">
+                                              <p>Any Indian citizen who meets the following criteria is eligible to register as a voter:</p>
+                                              <ul>
+                                                  <li>Is 18 years of age or above on the qualifying date (1st January of the year)</li>
+                                                  <li>Is a resident of the constituency where registration is sought</li>
+                                                  <li>Is not disqualified under any law for the time being in force</li>
+                                              </ul>
+                                              <p>Non-Resident Indians (NRIs) who are citizens of India are also eligible to register as voters.</p>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="faq-item">
+                                          <div class="faq-question">
+                                              <h3>What documents are required for voter registration?</h3>
+                                              <i class="fas fa-chevron-down"></i>
+                                          </div>
+                                          <div class="faq-answer">
+                                              <p>The following documents are required for voter registration:</p>
+                                              <ul>
+                                                  <li>Proof of age (Birth certificate, School leaving certificate, etc.)</li>
+                                                  <li>Proof of residence (Utility bills, Passport, Aadhaar card, etc.)</li>
+                                                  <li>Recent passport-sized photographs</li>
+                                                  <li>Aadhaar number (optional but preferred)</li>
+                                              </ul>
+                                              <p>All documents should be self-attested before submission.</p>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="faq-item">
+                                          <div class="faq-question">
+                                              <h3>How do I register as a voter on VoteIndia?</h3>
+                                              <i class="fas fa-chevron-down"></i>
+                                          </div>
+                                          <div class="faq-answer">
+                                              <p>To register as a voter on VoteIndia, follow these steps:</p>
+                                              <ol>
+                                                  <li>Click on the "Register" button on the homepage</li>
+                                                  <li>Select "Register as Voter" option</li>
+                                                  <li>Fill in your personal details, including name, age, and contact information</li>
+                                                  <li>Provide your address and ID information</li>
+                                                  <li>Upload the required documents</li>
+                                                  <li>Submit your application</li>
+                                              </ol>
+                                              <p>After submission, your application will be verified by the Election Commission. You will receive updates on your registration status via email and SMS.</p>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="faq-item">
+                                          <div class="faq-question">
+                                              <h3>How can I check my voter registration status?</h3>
+                                              <i class="fas fa-chevron-down"></i>
+                                          </div>
+                                          <div class="faq-answer">
+                                              <p>You can check your voter registration status in the following ways:</p>
+                                              <ul>
+                                                  <li>Log in to your VoteIndia account and check the "Registration Status" section on your dashboard</li>
+                                                  <li>Use the "Track Application" feature on the homepage by entering your application reference number</li>
+                                                  <li>Contact the VoteIndia helpline at 1800-111-950</li>
+                                              </ul>
+                                              <p>The status will show whether your application is pending, approved, or rejected. If rejected, the reason for rejection will also be provided.</p>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="faq-item">
+                                          <div class="faq-question">
+                                              <h3>Can I update my voter information after registration?</h3>
+                                              <i class="fas fa-chevron-down"></i>
+                                          </div>
+                                          <div class="faq-answer">
+                                              <p>Yes, you can update your voter information after registration. To do so:</p>
+                                              <ol>
+                                                  <li>Log in to your VoteIndia account</li>
+                                                  <li>Go to your profile or dashboard</li>
+                                                  <li>Click on "Update Information"</li>
+                                                  <li>Select the information you want to update</li>
+                                                  <li>Provide the new details and supporting documents if required</li>
+                                                  <li>Submit your request</li>
+                                              </ol>
+                                              <p>Common updates include change of address, correction of name or date of birth, and updating contact information. The updates will be verified before being approved.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </section>
+
+                          <!-- Voting Process Section -->
+                          <section id="voting-process" class="help-section">
+                              <div class="glass-card">
+                                  <h2 class="section-title">Voting Process</h2>
+                                  
+                                  <div class="faq-container">
+                                      <div class="faq-item">
+                                          <div class="faq-question">
+                                              <h3>How do I cast my vote on VoteIndia?</h3>
+                                              <i class="fas fa-chevron-down"></i>
+                                          </div>
+                                          <div class="faq-answer">
+                                              <p>To cast your vote on VoteIndia, follow these steps:</p>
+                                              <ol>
+                                                  <li>Log in to your VoteIndia account during the active voting period</li>
+                                                  <li>Navigate to the "Vote" section from the main menu or dashboard</li>
+                                                  <li>Verify your identity using the two-factor authentication method</li>
+                                                  <li>Review the list of candidates for your constituency</li>
+                                                  <li>Select your preferred candidate by clicking on their name/symbol</li>
+                                                  <li>Confirm your selection on the verification screen</li>
+                                                  <li>Submit your vote</li>
+                                              </ol>
+                                              <p>After submission, you will receive a confirmation receipt with a unique reference number. This confirms that your vote has been recorded, but does not reveal your choice to maintain ballot secrecy.</p>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="faq-item">
+                                          <div class="faq-question">
+                                              <h3>Is my vote confidential?</h3>
+                                              <i class="fas fa-chevron-down"></i>
+                                          </div>
+                                          <div class="faq-answer">
+                                              <p>Yes, your vote is completely confidential. VoteIndia employs several measures to ensure ballot secrecy:</p>
+                                              <ul>
+                                                  <li>The system separates your identity from your voting choice</li>
+                                                  <li>End-to-end encryption is used for all voting data</li>
+                                                  <li>No record is maintained that can link a voter to their specific vote</li>
+                                                  <li>The confirmation receipt only confirms that you voted, not who you voted for</li>
+                                                  <li>Access to voting data is strictly controlled and audited</li>
+                                              </ul>
+                                              <p>These measures ensure that no one, including election officials and system administrators, can determine how you voted.</p>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="faq-item">
+                                          <div class="faq-question">
+                                              <h3>Can I change my vote after submission?</h3>
+                                              <i class="fas fa-chevron-down"></i>
+                                          </div>
+                                          <div class="faq-answer">
+                                              <p>No, you cannot change your vote after submission. Once you confirm and submit your vote, it is final and cannot be altered or withdrawn. This is similar to traditional voting systems and ensures the integrity of the electoral process.</p>
+                                              <p>Therefore, please review your selection carefully before confirming your vote. The system will ask you to verify your choice before final submission to minimize errors.</p>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="faq-item">
+                                          <div class="faq-question">
+                                              <h3>What if I face technical issues while voting?</h3>
+                                              <i class="fas fa-chevron-down"></i>
+                                          </div>
+                                          <div class="faq-answer">
+                                              <p>If you face technical issues while voting, you can:</p>
+                                              <ul>
+                                                  <li>Refresh the page and try again</li>
+                                                  <li>Clear your browser cache and cookies</li>
+                                                  <li>Try using a different browser or device</li>
+                                                  <li>Contact the technical support helpline at 1800-111-950</li>
+                                                  <li>Use the live chat support available on the voting page</li>
+                                              </ul>
+                                              <p>If you were in the middle of voting and faced an issue, your vote will not be recorded until you complete the entire process and confirm your submission. You can log back in and start the voting process again.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </section>
+
+                          <!-- Contact Support Section -->
+                          <section id="contact-support" class="help-section">
+                              <div class="glass-card">
+                                  <h2 class="section-title">Contact Support</h2>
+                                  
+                                  <div class="contact-methods">
+                                      <div class="contact-card">
+                                          <div class="contact-icon">
+                                              <i class="fas fa-phone-alt"></i>
+                                          </div>
+                                          <h3>Toll-Free Helpline</h3>
+                                          <p>1800-111-950</p>
+                                          <p class="text-muted">Available 24/7 during election periods</p>
+                                          <p class="text-muted">9:00 AM to 6:00 PM on other days</p>
+                                      </div>
+                                      
+                                      <div class="contact-card">
+                                          <div class="contact-icon">
+                                              <i class="fas fa-envelope"></i>
+                                          </div>
+                                          <h3>Email Support</h3>
+                                          <p>support@voteindia.gov.in</p>
+                                          <p>contact@eci.gov.in</p>
+                                          <p class="text-muted">Response within 24-48 hours</p>
+                                      </div>
+                                      
+                                      <div class="contact-card">
+                                          <div class="contact-icon">
+                                              <i class="fas fa-comments"></i>
+                                          </div>
+                                          <h3>Live Chat</h3>
+                                          <p>Available on the website</p>
+                                          <p class="text-muted">9:00 AM to 9:00 PM daily</p>
+                                          <button class="btn btn-primary mt-2">Start Chat</button>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="contact-form-container">
+                                      <h3>Send us a message</h3>
+                                      <form id="contact-form" class="contact-form">
+                                          <div class="form-group">
+                                              <label for="contact-name" class="form-label">Full Name</label>
+                                              <input type="text" id="contact-name" name="name" class="form-input" required>
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                              <label for="contact-email" class="form-label">Email Address</label>
+                                              <input type="email" id="contact-email" name="email" class="form-input" required>
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                              <label for="contact-phone" class="form-label">Phone Number</label>
+                                              <input type="tel" id="contact-phone" name="phone" class="form-input">
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                              <label for="contact-subject" class="form-label">Subject</label>
+                                              <select id="contact-subject" name="subject" class="form-select" required>
+                                                  <option value="">Select a subject</option>
+                                                  <option value="Registration Issue">Registration Issue</option>
+                                                  <option value="Voting Problem">Voting Problem</option>
+                                                  <option value="Technical Support">Technical Support</option>
+                                                  <option value="Feedback">Feedback</option>
+                                                  <option value="Other">Other</option>
+                                              </select>
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                              <label for="contact-message" class="form-label">Message</label>
+                                              <textarea id="contact-message" name="message" class="form-input" rows="5" required></textarea>
+                                          </div>
+                                          
+                                          <button type="submit" class="btn btn-primary">Submit Message</button>
+                                      </form>
+                                  </div>
+                                  
+                                  <div class="regional-offices">
+                                      <h3>Regional Offices</h3>
+                                      <div class="offices-grid">
+                                          <div class="office-card">
+                                              <h4>Delhi (Headquarters)</h4>
+                                              <p>Election Commission of India</p>
+                                              <p>Nirvachan Sadan, Ashoka Road</p>
+                                              <p>New Delhi - 110001</p>
+                                              <p>Phone: 011-23052205</p>
+                                          </div>
+                                          
+                                          <div class="office-card">
+                                              <h4>Mumbai</h4>
+                                              <p>Regional Office, ECI</p>
+                                              <p>MMTC House, C-22, E-Block</p>
+                                              <p>Bandra Kurla Complex, Bandra (E)</p>
+                                              <p>Mumbai - 400051</p>
+                                              <p>Phone: 022-26594001</p>
+                                          </div>
+                                          
+                                          <div class="office-card">
+                                              <h4>Kolkata</h4>
+                                              <p>Regional Office, ECI</p>
+                                              <p>8, S.N. Banerjee Road</p>
+                                              <p>Kolkata - 700013</p>
+                                              <p>Phone: 033-22264414</p>
+                                          </div>
+                                          
+                                          <div class="office-card">
+                                              <h4>Chennai</h4>
+                                              <p>Regional Office, ECI</p>
+                                              <p>Rajaji Bhawan, Besant Nagar</p>
+                                              <p>Chennai - 600090</p>
+                                              <p>Phone: 044-24919191</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </section>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </main>
+
+      <!-- Footer (Same as index.html) -->
+      <footer class="footer">
+          <div class="container">
+              <div class="footer-grid">
+                  <div>
+                      <h3 class="footer-title">VoteIndia</h3>
+                      <p>
+                          Official online voting platform operated by the Election Commission of India. Secure, transparent, and
+                          accessible voting for all citizens.
+                      </p>
+                      <div class="social-links">
+                          <a href="https://www.facebook.com/ECI/" target="_blank" rel="noopener noreferrer" class="social-link">
+                              <i class="fab fa-facebook"></i>
+                          </a>
+                          <a href="https://x.com/ECISVEEP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer" class="social-link">
+                              <i class="fab fa-twitter"></i>
+                          </a>
+                          <a href="https://www.instagram.com/ecisveep/?hl=en" target="_blank" rel="noopener noreferrer" class="social-link">
+                              <i class="fab fa-instagram"></i>
+                          </a>
+                          <a href="https://www.youtube.com/channel/UCGdsgdPfwnwYF1l8YTFkknA" target="_blank" rel="noopener noreferrer" class="social-link">
+                              <i class="fab fa-youtube"></i>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div>
+                      <h3 class="footer-title">Quick Links</h3>
+                      <ul class="footer-links">
+                          <li>
+                              <a href="index.html" class="footer-link">Home</a>
+                          </li>
+                          <li>
+                              <a href="candidates.html" class="footer-link">Candidates</a>
+                          </li>
+                          <li>
+                              <a href="results.html" class="footer-link">Results</a>
+                          </li>
+                          <li>
+                              <a href="about.html" class="footer-link">About</a>
+                          </li>
+                          <li>
+                              <a href="help.html" class="footer-link">Help</a>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div>
+                      <h3 class="footer-title">Contact Us</h3>
+                      <ul class="footer-links">
+                          <li class="footer-contact">
+                              <i class="fas fa-phone contact-icon"></i>
+                              <span>1800-111-950</span>
+                          </li>
+                          <li class="footer-contact">
+                              <i class="fas fa-envelope contact-icon"></i>
+                              <span>contact@eci.gov.in</span>
+                          </li>
+                          <li class="footer-contact">
+                              <i class="fas fa-map-marker-alt contact-icon"></i>
+                              <span>Nirvachan Sadan, Ashoka Road, New Delhi - 110001</span>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+          <div class="footer-bottom">
+              <div class="container">
+                  <div class="footer-official">
+                      <i class="fas fa-shield-alt official-icon"></i>
+                      <span>Secured and monitored by the Election Commission of India</span>
+                  </div>
+                  <p class="copyright">
+                      &copy; <span id="current-year">2024</span> VoteIndia. All rights reserved. Official government voting platform.
+                  </p>
+              </div>
+          </div>
+      </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/help.js"></script>
+</body>
+</html>
+

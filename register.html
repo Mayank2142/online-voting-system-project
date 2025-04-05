@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - VoteIndia</title>
+    <meta name="description" content="Register for VoteIndia - Official Voting Platform">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header (Same as index.html) -->
+        <header class="header">
+            <div class="container">
+                <div class="header-container">
+                    <a href="index.html" class="logo">
+                        <img src="download__3_-removebg-preview.png" alt="VoteIndia Logo" height="32" width="32">
+                        <span>VoteIndia</span>
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li>
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="candidates.html" class="nav-link">Candidates</a>
+                            </li>
+                            <li>
+                                <a href="results.html" class="nav-link">Results</a>
+                            </li>
+                            <li class="nav-item-auth hidden">
+                                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                            </li>
+                            <li class="nav-item-voter hidden">
+                                <a href="vote.html" class="nav-link">Vote</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="nav-link">About</a>
+                            </li>
+                            <li>
+                                <a href="help.html" class="nav-link">Help</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-actions">
+                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-outline">Login</a>
+                            <a href="register.html" class="btn btn-saffron active">Register</a>
+                        </div>
+
+                        <div class="user-menu hidden">
+                            <button class="btn btn-icon">
+                                <i class="fas fa-bell"></i>
+                            </button>
+                            <a href="dashboard.html" class="btn btn-icon">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <button id="logout-btn" class="btn btn-outline">Logout</button>
+                        </div>
+
+                        <button class="mobile-menu-button" aria-label="Toggle menu">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <div class="container">
+                    <ul class="mobile-nav-list">
+                        <li>
+                            <a href="index.html" class="mobile-nav-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="candidates.html" class="mobile-nav-link">Candidates</a>
+                        </li>
+                        <li>
+                            <a href="results.html" class="mobile-nav-link">Results</a>
+                        </li>
+                        <li class="mobile-nav-item-auth hidden">
+                            <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+                        </li>
+                        <li class="mobile-nav-item-voter hidden">
+                            <a href="vote.html" class="mobile-nav-link">Vote</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="mobile-nav-link">About</a>
+                        </li>
+                        <li>
+                            <a href="help.html" class="mobile-nav-link">Help</a>
+                        </li>
+                        <li class="mobile-auth-buttons">
+                            <a href="login.html" class="btn btn-outline btn-full">Login</a>
+                        </li>
+                        <li class="mobile-auth-buttons">
+                            <a href="register.html" class="btn btn-saffron btn-full active">Register</a>
+                        </li>
+                        <li class="mobile-user-menu hidden">
+                            <button id="mobile-logout-btn" class="btn btn-saffron btn-full">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <h1 class="auth-title">Create an Account</h1>
+
+                    <div id="registration-steps">
+                        <!-- Step 1: User Type Selection -->
+                        <div class="registration-step" id="step-1">
+                            <div class="user-type-selection">
+                                <h2 class="section-subtitle">Select Account Type</h2>
+
+                                <div class="radio-cards">
+                                    <div class="radio-card" id="voter-card">
+                                        <div class="radio-card-input">
+                                            <input type="radio" id="voter" name="userType" value="voter">
+                                        </div>
+                                        <div class="radio-card-content">
+                                            <div class="radio-card-icon">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <h3 class="radio-card-title">Register as Voter</h3>
+                                            <p class="radio-card-description">Register to vote in elections and make your voice heard</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="radio-card" id="candidate-card">
+                                        <div class="radio-card-input">
+                                            <input type="radio" id="candidate" name="userType" value="candidate">
+                                        </div>
+                                        <div class="radio-card-content">
+                                            <div class="radio-card-icon">
+                                                <i class="fas fa-user-tie"></i>
+                                            </div>
+                                            <h3 class="radio-card-title">Register as Candidate</h3>
+                                            <p class="radio-card-description">Register as a candidate to stand in elections</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Basic Information -->
+                        <div class="registration-step hidden" id="step-2">
+                            <form id="basic-info-form">
+                                <div class="form-group">
+                                    <label for="fullName" class="form-label">
+                                        Full Name <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="text" id="fullName" name="fullName" class="form-input" required>
+                                    <div class="form-error" id="fullName-error"></div>
+                                    <div class="form-hint">Only alphabets are allowed</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">
+                                        Email <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                    <div class="form-error" id="email-error"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="age" class="form-label">
+                                        Age <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="number" id="age" name="age" class="form-input" min="18" required>
+                                    <div class="form-error" id="age-error"></div>
+                                    <div class="form-hint">You must be at least 18 years old to register</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">
+                                        Phone Number <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" maxlength="10" required>
+                                    <div class="form-error" id="phone-error"></div>
+                                    <div class="form-hint">10-digit mobile number without country code</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password" class="form-label">
+                                        Password <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="password" id="password" name="password" class="form-input" required>
+                                    <div class="form-error" id="password-error"></div>
+                                    <div class="form-hint">Minimum 8 characters with both letters and numbers</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword" class="form-label">
+                                        Confirm Password <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" required>
+                                    <div class="form-error" id="confirmPassword-error"></div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline" id="back-to-step-1">Back</button>
+                                    <button type="button" class="btn btn-primary" id="go-to-step-3">Next</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Step 3: Address and ID Information -->
+                        <div class="registration-step hidden" id="step-3">
+                            <form id="address-info-form">
+                                <div class="form-group">
+                                    <label for="address" class="form-label">
+                                        Address <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="text" id="address" name="address" class="form-input" required>
+                                    <div class="form-error" id="address-error"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="city" class="form-label">
+                                        City <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="text" id="city" name="city" class="form-input" required>
+                                    <div class="form-error" id="city-error"></div>
+                                    <div class="form-hint">Only alphabets are allowed</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="state" class="form-label">
+                                        State <span class="text-destructive">*</span>
+                                    </label>
+                                    <select id="state" name="state" class="form-select" required>
+                                        <option value="">Select State</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                    <div class="form-error" id="state-error"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pincode" class="form-label">
+                                        PIN Code <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="text" id="pincode" name="pincode" class="form-input" maxlength="6" required>
+                                    <div class="form-error" id="pincode-error"></div>
+                                    <div class="form-hint">6-digit PIN code</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="aadharNumber" class="form-label">
+                                        Aadhar Number <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="text" id="aadharNumber" name="aadharNumber" class="form-input" maxlength="12" required>
+                                    <div class="form-error" id="aadharNumber-error"></div>
+                                    <div class="form-hint">12-digit Aadhar number</div>
+                                </div>
+
+                                <div class="form-group voter-only">
+                                    <label for="voterID" class="form-label">
+                                        Voter ID (EPIC Number) <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="text" id="voterID" name="voterID" class="form-input" maxlength="12">
+                                    <div class="form-error" id="voterID-error"></div>
+                                    <div class="form-hint">12-digit Voter ID number</div>
+                                </div>
+
+                                <div class="alert alert-warning mb-4">
+                                    <i class="fas fa-exclamation-triangle alert-icon"></i>
+                                    <div>
+                                        <h3 class="alert-title">Important</h3>
+                                        <p class="alert-message">
+                                            By submitting this form, you confirm that all information provided is accurate. Providing false
+                                            information is a punishable offense under the Election Commission guidelines.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline" id="back-to-step-2">Back</button>
+                                    <button type="button" class="btn btn-primary" id="go-to-step-4">Next</button>
+                                    <button type="button" class="btn btn-primary voter-submit hidden" id="voter-submit">Register</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Step 4: Candidate Information (Only for candidates) -->
+                        <div class="registration-step hidden" id="step-4">
+                            <form id="candidate-info-form">
+                                <div class="form-group">
+                                    <label for="party" class="form-label">
+                                        Political Party <span class="text-destructive">*</span>
+                                    </label>
+                                    <select id="party" name="party" class="form-select" required>
+                                        <option value="">Select Party</option>
+                                        <option value="Bharatiya Janata Party">Bharatiya Janata Party</option>
+                                        <option value="Indian National Congress">Indian National Congress</option>
+                                        <option value="Aam Aadmi Party">Aam Aadmi Party</option>
+                                        <option value="Samajwadi Party">Samajwadi Party</option>
+                                        <option value="Bahujan Samaj Party">Bahujan Samaj Party</option>
+                                        <option value="Independent">Independent</option>
+                                    </select>
+                                    <div class="form-error" id="party-error"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="constituency" class="form-label">
+                                        Constituency <span class="text-destructive">*</span>
+                                    </label>
+                                    <input type="text" id="constituency" name="constituency" class="form-input" required>
+                                    <div class="form-error" id="constituency-error"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="position" class="form-label">
+                                        Position <span class="text-destructive">*</span>
+                                    </label>
+                                    <select id="position" name="position" class="form-select" required>
+                                        <option value="">Select Position</option>
+                                        <option value="Lok Sabha">Lok Sabha</option>
+                                        <option value="Rajya Sabha">Rajya Sabha</option>
+                                        <option value="State Legislative Assembly">State Legislative Assembly</option>
+                                        <option value="Municipal Corporation">Municipal Corporation</option>
+                                    </select>
+                                    <div class="form-error" id="position-error"></div>
+                                </div>
+
+                                <div class="alert alert-warning mb-4">
+                                    <i class="fas fa-exclamation-triangle alert-icon"></i>
+                                    <div>
+                                        <h3 class="alert-title">Candidate Declaration</h3>
+                                        <p class="alert-message">
+                                            As a candidate, you are required to submit additional documentation and verification. A representative
+                                            from the Election Commission will contact you for further verification.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline" id="back-to-step-3">Back</button>
+                                    <button type="submit" class="btn btn-primary" id="candidate-submit">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="auth-footer">
+                        Already have an account?
+                        <a href="login.html" class="form-link">Login</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer (Same as index.html) -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <h3 class="footer-title">VoteIndia</h3>
+                        <p>
+                            Official online voting platform operated by the Election Commission of India. Secure, transparent, and
+                            accessible voting for all citizens.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="index.html" class="footer-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="candidates.html" class="footer-link">Candidates</a>
+                            </li>
+                            <li>
+                                <a href="results.html" class="footer-link">Results</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="footer-link">About</a>
+                            </li>
+                            <li>
+                                <a href="help.html" class="footer-link">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="footer-title">Contact Us</h3>
+                        <ul class="footer-links">
+                            <li class="footer-contact">
+                                <i class="fas fa-phone contact-icon"></i>
+                                <span>1800-111-950</span>
+                            </li>
+                            <li class="footer-contact">
+                                <i class="fas fa-envelope contact-icon"></i>
+                                <span>contact@eci.gov.in</span>
+                            </li>
+                            <li class="footer-contact">
+                                <i class="fas fa-map-marker-alt contact-icon"></i>
+                                <span>Nirvachan Sadan, Ashoka Road, New Delhi - 110001</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-official">
+                        <i class="fas fa-shield-alt official-icon"></i>
+                        <span>Secured and monitored by the Election Commission of India</span>
+                    </div>
+                    <p class="copyright">
+                        &copy; <span id="current-year">2024</span> VoteIndia. All rights reserved. Official government voting platform.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>
+
