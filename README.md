@@ -1,24 +1,25 @@
-"Online Voting System"
+## Online Voting System ##
 
-This is a Web-Based Online Voting System built using HTML, CSS, JavaScript, Node.js, Express, and SQLite3. 
+This is a **Web-Based Online Voting System** built using HTML, CSS, JavaScript, Node.js, Express, and SQLite3. 
 The application provides a secure, interactive, and easy-to-use platform for conducting elections digitally, allowing users to vote from anywhere with internet access.
 
-Features
--  Register and login functionality
--  Register as either a Voter or Candidate
--  Voter dashboard shows personal details from the registration form
--  Cast your vote via a secure and confirmation-based process
--  Confirmation page before final submission of vote
--  Real-time election result display
--  Candidate list with names and party info
--  Additional pages: Home, About , Help.
+### 🚀 Features ###
+-  🔐 Register and login functionality
+-  🧑 Register as either a Voter or Candidate
+-  📋 Voter dashboard shows personal details from the registration form
+-  🗳️ Cast your vote via a secure and confirmation-based process
+-  ✅ Confirmation page before final submission of vote
+-  📊 Real-time election result display
+-  👥 Candidate list with names and party info
+-  🏠 Additional pages: Home, About , Help.
 
- Tech Stack
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js, Express.js
-- Database: SQLite3
+### 🛠️ Tech Stack ###
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Node.js, Express.js
+- **Database**: SQLite3
 
-Project Structure
+## 📂 Project Structure
+```bash
 - online-voting-system-project/
 - ├── css/                      # Stylesheets for the project
 - ├── js/                       # JavaScript files for client-side functionality
@@ -43,14 +44,13 @@ Project Structure
 - ├ ── README.md                 # Project documentation
 - ├── package.json              # Project metadata and dependencies
 - └── .gitignore                # Specifies files and directories to be ignored by Git
+```
+## 🧪 Getting Started ##
 
-
-Getting Started
-
-Prerequisites
+#### ✅ Prerequisites ####
 - Node.js & npm installed on your system
 
-Installation
+#### 🔧 Installation ####
 - git clone https://github.com/Mayank2142/online-voting-system-project.git
 - cd online-voting-system-project
 - cd server
@@ -58,25 +58,25 @@ Installation
 - node server/app.js
 - http://localhost:3000
 
-Usage
+### 📚 Usage ###
 - Register as a voter or candidate
 - Login with your credentials
 - Voter: View your dashboard and personal details
 - Click "Cast Your Vote" → select a candidate → confirm → view result
 - Explore additional pages like candidate list, about, and help
 
-License
+### License ###
 - This project is open-source and available under the MIT License.
 
-Author
-- Developed by Mayank
-- Feel free to connect on GitHub
+### 👨‍💻 Author ###
+- Developed by **Mayank**
+- Feel free to connect on https://github.com/Mayank2142
 
-NOTE
+### NOTE ###
 - If you get a port error, open server/app.js and change the port number as needed.
 - The frontend files (HTML, CSS, JS) are in the main project folders (views/, css/, js/), and backend logic is handled in the server/ folder.
 
-SCRRENSHOT:-
+### 📸 SCRRENSHOT :-
 ![image](https://github.com/user-attachments/assets/98222651-78c5-4c42-9d34-0bd8ad628608)
 ![image](https://github.com/user-attachments/assets/a6deec6c-9616-47f1-852a-1f403bd2ce3e)
 ![image](https://github.com/user-attachments/assets/f8c92cb4-a985-4260-a9be-a31bd45d8bb1)
