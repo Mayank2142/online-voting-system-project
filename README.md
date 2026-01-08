@@ -1,5 +1,8 @@
 ## Online Voting System ##
 
+### 🔗 Live Deployment ###
+ https://mayank2142.github.io/online-voting-system-project/register.html
+
 This is a **Web-Based Online Voting System** built using HTML, CSS, JavaScript, Node.js, Express, and SQLite3. 
 The application provides a secure, interactive, and easy-to-use platform for conducting elections digitally, allowing users to vote from anywhere with internet access.
 
